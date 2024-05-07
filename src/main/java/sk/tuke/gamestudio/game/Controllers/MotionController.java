@@ -23,7 +23,7 @@ public class MotionController {
         boolean isCanMove = false;
         Tile[][] pole  = field.getPole();
         resetMatrix();
-
+        if(isMove) field.cleanTilesInfo();
 
         for (int col = 0; col < pole.length; col++) {
             for (int row = 0; row < pole[0].length; row++) {
@@ -51,7 +51,6 @@ public class MotionController {
         int rows = pole[0].length;
         if(placedNumbers.length!=cols || placedNumbers[0].length!=rows){
             placedNumbers = new int[cols][rows];
-
         }
 
         if((direction==Direction.DOWN && (cols - i - 1) != cols - 1 ) || ( direction == Direction.RIGHT && (rows - j - 1) != rows - 1 )){
@@ -130,9 +129,10 @@ public class MotionController {
             }
 
             if(pole[finded_i][finded_j] instanceof EmptyTile){
-                pole[finded_i][finded_j]= new NumeralTile(pole[i][j].getValue());
+                pole[finded_i][finded_j]= new NumeralTile(pole[i][j].getValue(),false,true,false);
             }else{
                 pole[finded_i][finded_j].setValue(pole[i][j].getValue());
+                ((NumeralTile) pole[finded_i][finded_j]).setMoved(true);
             }
             pole[i][j]=new EmptyTile();
 
@@ -140,8 +140,6 @@ public class MotionController {
         field.setPole(pole);
         return field;
     }
-
-
 
     private void resetMatrix(){
         for (int col = 0; col < placedNumbers.length; col++) {

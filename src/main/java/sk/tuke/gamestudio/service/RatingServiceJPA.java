@@ -23,7 +23,6 @@ public class RatingServiceJPA implements RatingService{
             Rating existing_rating = (Rating) query.getSingleResult();
             existing_rating.setRating(rating.getRating());
             existing_rating.setRatedOn(rating.getRatedOn());
-//            entityManager.merge(existing_rating);
 
         } catch (NoResultException e) {
             entityManager.persist(rating);
@@ -36,7 +35,7 @@ public class RatingServiceJPA implements RatingService{
         String queryString = "SELECT AVG(r.rating) FROM Rating r WHERE game = \'" + game + "\'";
         Query query = entityManager.createQuery(queryString);
         Double result =(Double) query.getSingleResult();
-        if(result!=null) return result.intValue();
+        if(result!=null) return (int) Math.round(result);
         else return 0;
     }
 

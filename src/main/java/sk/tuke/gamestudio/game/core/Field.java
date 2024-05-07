@@ -70,7 +70,6 @@ public class Field {
 
         }
 
-
         boolean isFound = false;
         Random rand = new Random();
         while(!isFound){
@@ -195,6 +194,7 @@ public class Field {
     public void setNewValue(int i, int j, Tile tile) {
         pole[i][j] = tile;
     }
+
     public void addScore(int number){
         this.score+=number;
     }
@@ -299,6 +299,18 @@ public class Field {
     public void addOneStep(){
         this.count_steps++;
         addPerk();
+    }
+
+    public void cleanTilesInfo(){
+        for (int col = 0; col < colCount; col++) {
+            for (int row = 0; row < rowCount; row++) {
+                if(pole[col][row] instanceof NumeralTile){
+                    ((NumeralTile) pole[col][row]).setNew(false);
+                    ((NumeralTile) pole[col][row]).setMoved(false);
+                    ((NumeralTile) pole[col][row]).setDoubled(false);
+                }
+            }
+        }
     }
 
     public List<String> getPerks() {

@@ -7,14 +7,12 @@ import sk.tuke.gamestudio.entity.Comment;
 import java.util.List;
 
 @Transactional
-
 public class CommentServiceJPA implements CommentService{
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
     public void addComment(Comment comment) throws CommentException {
-        System.out.println(comment);
         entityManager.persist(comment);
 
     }

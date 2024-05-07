@@ -32,17 +32,13 @@ public class GameSettingsUI {
         while (!CHOOSE_MODE_PATTERN.matcher(temp_mode).matches() ){
             System.out.println("Write 1, 2, 3 or 4!");
             temp_mode = scanner.nextLine();
-
         }
+
         mode = Integer.parseInt(temp_mode);
         if(mode == 3) tutorial_mode();
 
         System.out.println("\033[H\033[2J");
         return mode;
-
-
-
-
     }
 
     public int chose_difficult(Field field) {
@@ -125,15 +121,11 @@ public class GameSettingsUI {
                     while (!OBSTACLE_COUNT_PATTER.matcher(temp_obstacle_count).matches()) {
                         System.out.println("The length must be in the range 0 to " + max_obstacle);
                         System.out.println("How many obstacle should there be (min - 0 | max - " + max_obstacle + "):");
-
                         temp_obstacle_count = scanner.nextLine();
                     }
                     field.setCount_obstacle(Integer.parseInt(temp_obstacle_count));
                 }
-
             }
-
-
         }
 
         System.out.println();
@@ -151,7 +143,6 @@ public class GameSettingsUI {
             while (!SCORES_PATTER.matcher(answer).matches()){
                 System.out.println("Choose from this list(16|32|64|128|256|512|1024) ");
                 answer = scanner.nextLine();
-
             }
             field.setScores_to_win(Integer.parseInt(answer));
 
@@ -167,7 +158,6 @@ public class GameSettingsUI {
         }
 
         field.setIs_use_perks(POSITIVE_ANSWER_PATTERN.matcher(answer).matches());
-
         System.out.println("\033[H\033[2J");
 
 

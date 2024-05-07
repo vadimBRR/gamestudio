@@ -10,7 +10,7 @@ import java.util.Date;
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor
-@Table(name = "rating", uniqueConstraints = @UniqueConstraint(columnNames = {"game","player"}))
+//@Table(name = "rating", uniqueConstraints = @UniqueConstraint(columnNames = {"game","player"}))
 public class Rating implements Serializable {
     @Id
     @GeneratedValue

@@ -1,9 +1,9 @@
 package sk.tuke.gamestudio.game.Controllers;
 
 import sk.tuke.gamestudio.game.core.Field;
+import sk.tuke.gamestudio.game.core.Tile;
 import sk.tuke.gamestudio.game.core.enums.Direction;
 import sk.tuke.gamestudio.game.core.enums.GameState;
-import sk.tuke.gamestudio.game.core.Tile;
 
 public class GameController {
     private Field field;
@@ -58,7 +58,7 @@ public class GameController {
             return false;
         }
         field.setState(GameState.FAILED);
-            return true;
+        return true;
     }
 
 

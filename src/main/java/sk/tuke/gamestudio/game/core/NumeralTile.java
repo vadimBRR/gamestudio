@@ -5,11 +5,25 @@ import java.util.Objects;
 public class NumeralTile implements Tile, Comparable<NumeralTile> {
     private int value;
     private String color;
+    private boolean isNew;
+    private boolean isMoved;
+    private boolean isDoubled;
 
 
 
     public NumeralTile(int value) {
         this.value = value;
+        this.isNew = true;
+        this.isMoved = false;
+        this.isDoubled = false;
+        setColorForNumber();
+
+    }
+    public NumeralTile(int value, boolean isNew, boolean isMoved, boolean isDoubled) {
+        this.value = value;
+        this.isNew = isNew();
+        this.isMoved = isMoved;
+        this.isDoubled = isDoubled;
         setColorForNumber();
 
     }
@@ -19,6 +33,7 @@ public class NumeralTile implements Tile, Comparable<NumeralTile> {
     }
 
     public void setValue(int value) {
+        if(this.value == value/2) isDoubled = true;
         this.value = value;
         setColorForNumber();
 
@@ -72,6 +87,30 @@ public class NumeralTile implements Tile, Comparable<NumeralTile> {
                 break;
 
         }
+    }
+
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean aNew) {
+        isNew = aNew;
+    }
+
+    public boolean isMoved() {
+        return isMoved;
+    }
+
+    public void setMoved(boolean moved) {
+        isMoved = moved;
+    }
+
+    public boolean isDoubled() {
+        return isDoubled;
+    }
+
+    public void setDoubled(boolean doubled) {
+        isDoubled = doubled;
     }
 
     @Override

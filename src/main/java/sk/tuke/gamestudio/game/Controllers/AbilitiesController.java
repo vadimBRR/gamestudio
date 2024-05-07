@@ -51,9 +51,25 @@ public class AbilitiesController {
         field.removePerk(idx);
 
     }
+
+    public void usePerkWeb(int idx, int col, int row){
+        if(idx == -1){
+            return;
+        }
+
+        if(idx == 0) remove_tile(col, row);
+        else if(idx == 2) double_tile_value(col,row);
+        else if(idx == 1 ) sortField();
+        else if(idx == 3) replace_with_eight();
+
+        List<String> availablePerks = new ArrayList<>(Arrays.asList("remove the tile", "sort field", "double the value of the tile","replace smaller values with 8"));
+        int idx_remove = field.getPerks().indexOf(availablePerks.get(idx));
+        field.removePerk(idx_remove);
+
+    }
+
     public void sortField(){
 
-        System.out.println();
         int cols = field.getColCount();
         int rows = field.getRowCount();
         Tile[][] pole = field.getPole();
@@ -105,7 +121,11 @@ public class AbilitiesController {
             System.out.println("You can't remove the obstacle!");
             return;
         }
+        
+        field.getPole();
         field.setNewValue(col,row,new EmptyTile());
+        field.getPole();
+
     }
 
     public void double_tile_value(int col, int row){

@@ -14,11 +14,13 @@ import java.util.Objects;
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor
+@NamedQuery( name = "Score.getTopScoresUniquePlayers",
+        query = "SELECT s FROM Score s WHERE s.game = :game AND s.points = (SELECT MAX(s2.points) FROM Score s2 WHERE s2.player = s.player AND s2.game = s.game) GROUP BY s.ident, s.player,s.game, s.points,s.playedOn ORDER BY s.points DESC")
 @NamedQuery( name = "Score.getTopScores",
         query = "SELECT s FROM Score s WHERE s.game=:game ORDER BY s.points DESC")
 @NamedQuery( name = "Score.resetScores",
         query = "DELETE FROM Score")
-@Table(name = "score", uniqueConstraints = @UniqueConstraint(columnNames = {"game","player"}))
+//@Table(name = "score", uniqueConstraints = @UniqueConstraint(columnNames = {"game","player"}))
 
 public class Score implements Serializable {
     @Id
