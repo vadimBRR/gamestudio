@@ -1,0 +1,19 @@
+.stars_icon {
+  font-size: 32px;
+}
+
+.container_start{
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+@media (max-width: 689px) {
+  .container_start{
+    position: absolute;
+    top: 45px;
+    left: 0;
+  }
+
+}

@@ -1,0 +1,11 @@
+.ErrorText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 95vh;
+  color: white;
+  font-size: 128px;
+  text-shadow: 0 0 2px #000000, 0 0 5px #08000c;
+
+}

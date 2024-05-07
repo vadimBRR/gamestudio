@@ -1,0 +1,84 @@
+.LeaderBoardPage{
+  padding: 50px;
+}
+.pageBlockPlayers{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.leaderboard_title{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 0 2px #000000, 0 0 5px #08000c;
+
+}
+
+.containerPlayers{
+  width: 100%;
+}
+
+@media (min-width: 637px) {
+  .leaderboard_title{
+    font-size: 100px;
+
+  }
+  .containerPlayers{
+  text-align: center;
+
+  }
+}
+
+@media (max-width: 689px) {
+  .leaderboard_title{
+    font-size: 80px;
+
+  
+    }
+}
+@media (max-width: 456px) {
+  .leaderboard_title{
+    font-size: 60px;
+
+  
+    }
+}
+@media (max-width: 380px) {
+  .leaderboard_title{
+    font-size: 50px;
+
+  
+    }
+}
+
+@media (min-width: 860px) {
+  .pageBlockPlayers{
+  margin: 0 20%;
+
+  }
+}
+@media (max-width: 860px) {
+  .pageBlockPlayers{
+    margin: 0 0%;
+  
+    }
+}
+
+
+
+@media (min-width: 483px) {
+  .LeaderBoardPage{
+  padding: 50px;
+
+  }
+}
+@media (max-width: 860px) {
+  .LeaderBoardPage{
+    padding: 50px 20px;
+
+  
+    }
+}
+
+

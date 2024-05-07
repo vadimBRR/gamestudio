@@ -1,0 +1,140 @@
+.CommentsPage{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.containerComment{
+  width: 100%;
+}
+
+.headerComment{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_title{
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-size: 55px;
+  text-shadow: 0 0 3px #000000, 0 0 5px #08000c;
+
+}
+.add_comment{
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+.add_comment:hover{
+  background-color: #a771f8af;
+}
+
+
+.pageBlock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 20%;
+}
+
+.noResultContainer{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.largeText{
+  color: white;
+  text-shadow: 0 0 3px #000000, 0 0 5px #08000c;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  .largeText{
+    font-size: 85px;
+  }
+}
+@media (max-width: 840px) {
+  .largeText{
+    font-size: 70px;
+  }
+}
+@media (max-width: 689px) {
+  .largeText{
+    font-size: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .largeText{
+    font-size: 50px;
+  }
+}
+@media (max-width: 516px) {
+  .largeText{
+    font-size: 40px;
+  }
+}
+@media (max-width: 410px) {
+  .largeText{
+    font-size: 30px;
+  }
+}
+
+
+@media (min-width: 689px) {
+  .pageBlock{
+    margin: 0 20%;
+  }
+  .header_container{
+    justify-content: space-between;
+  }
+}
+@media (max-width: 689px) {
+  .headerComment{
+    padding-bottom: 12px;
+  }
+  .pageBlock{
+    
+    margin: 0 10%;
+  }
+  .header_container{
+    justify-content: left;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 596px) {
+  .headerComment{
+    padding-bottom: 12px;
+  }
+  .pageBlock{
+    
+    margin: 0 5%;
+  }
+  .header_container{
+    justify-content: left;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+.main_title{
+  font-size: 45px;
+}
+.CommentsPage{
+  padding-top: 47px;
+}
+}
+
+@media (max-width: 596px) {
+  .headerComment{
+    padding-bottom: 25px;
+  }
+}
+

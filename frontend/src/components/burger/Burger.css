@@ -1,0 +1,291 @@
+input {
+  display: none;
+}
+.burger_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+
+}
+.burger_container {
+  border-radius: 100px;
+  transition: background-color 0.6s ease;
+}
+@media (min-width: 450px) {
+  .burger_container{
+    right: 20px;
+    top: 20px;
+    
+  }
+}
+@media (max-width: 900px) {
+  .burger_container{
+    right: 5px;
+    top: 5px;
+  }
+}
+
+@media (min-width: 811px) {
+  .burger_container {
+    width: 100px;
+    padding-bottom: 20px;
+
+  }
+}
+@media (max-width: 811px) {
+  .burger_container {
+    width: 70px;
+  padding-bottom: 10px;
+
+  }
+}
+.showBurgerContainer {
+  background-color: rgba(255, 255, 255, 0.397);
+
+
+}
+
+label {
+  display: block;
+  cursor: pointer;
+
+  max-width: 115px;
+  max-height: 115px;
+}
+@media (min-width: 811px) {
+  label{
+    width: 50vw;
+    height: 50vw;
+  }
+}
+@media (max-width: 811px) {
+  label{
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+
+
+.menu--1 label {
+  right: 0;
+  top: 0;
+
+}
+
+
+path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all .8s cubic-bezier(.645, .045, .355, 1);
+}
+
+circle {
+  fill: #fff3;
+  opacity: 0;
+}
+
+label:hover path {
+  stroke: #a94dff;
+}
+
+label:hover input:checked+svg path {
+  stroke: #e56666;
+
+}
+
+
+
+
+
+
+label:hover circle {
+  opacity: 1;
+}
+
+.cross input:checked+svg {
+
+  .line--1,
+  .line--3 {
+    --length: 22.627416998;
+  }
+
+  .line--2 {
+    --length: 0;
+  }
+}
+
+.back input:checked+svg {
+
+  .line--1,
+  .line--3 {
+    --length: 8.602325267;
+  }
+}
+
+.menu--1 {
+  background-color: #3f77e9;
+
+  .line--1,
+  .line--3 {
+    --total-length: 126.64183044433594;
+  }
+
+  .line--2 {
+    --total-length: 70;
+  }
+
+  input:checked+svg {
+
+    .line--1,
+    .line--3 {
+      --offset: -94.1149185097;
+    }
+
+    .line--2 {
+      --offset: -50;
+    }
+  }
+}
+
+.opened_burger {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+
+@media (min-width: 811px) {
+  .burger_container label {
+    height: 100px;
+  }
+}
+@media (max-width: 811px) {
+  .burger_container label {
+    height: 70px;
+  }
+}
+
+.lordicon{
+
+}
+
+
+
+@media (min-width: 811px) {
+  lord-icon{
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 811px) {
+  lord-icon{
+    width: 40px;
+    height: 40px;
+  }
+}
+.opened_burger.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.burger_item {
+  color: white;
+  transition: color 0.4s ease;
+}
+
+.burger_item.hidden {
+  display: none;
+}
+
+.burger_item:hover {
+  color: #b88cfa;
+
+}
+
+.leaderboard {
+
+  background-image: url(../../../public/images/burger_item/frame.png);
+  background-size: cover;
+
+}
+.logout{
+  background-image: url(../../../public/images/burger_item/logout_icon.png);
+  background-size: cover;
+}
+.signin{
+  background-image: url(../../../public/images/burger_item/signin.png);
+  background-size: cover;
+}
+
+@media (min-width: 811px) {
+  .leaderboard {
+    height: 70px;
+    width: 70px;
+  }
+  
+  .logout {
+    height: 60px;
+    width: 60px;
+  }
+  .signin {
+    height: 60px;
+    width: 60px;
+  }
+
+}
+@media (max-width: 811px) {
+  .leaderboard {
+    height: 60px;
+    width: 60px;
+  }
+  .logout {
+    height: 50px;
+    width: 50px;
+  }
+  .signin {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.leaderboard:hover {
+  background-image: url(../../../public/images/burger_item/leaderboard.gif);
+  background-size: cover;
+
+}
+.logout:hover {
+  background-image: url(../../../public/images/burger_item/logout.gif);
+  background-size: cover;
+
+}
+.signin:hover {
+  background-image: url(../../../public/images/burger_item/signin.gif);
+  background-size: cover;
+
+}
+
+@media (min-width: 900px) {
+  .burger_container {
+    position: fixed;
+  }
+}
+
+@media (max-width: 900px) {
+  .burger_container {
+    position: absolute;
+  }
+}

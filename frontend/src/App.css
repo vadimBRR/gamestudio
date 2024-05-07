@@ -1,0 +1,10 @@
+
+body{
+  background-color:#57407c  !important;
+}
+.App {
+  /* background: linear-gradient(19deg,  #21D4FD, #B721FF); */
+  min-height: 100vh;
+  position: relative;
+}
+

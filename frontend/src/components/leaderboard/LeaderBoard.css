@@ -1,0 +1,224 @@
+
+
+.container_card_points{
+  background-color: rgba(128, 128, 128, 0.379);
+  width: 100%;
+  color: white;
+  margin-bottom: 10px;
+  padding: 0px 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px rgba(0, 0, 0, 0.699) solid;
+  border-right: 2px rgba(0, 0, 0, 0.598) solid;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.container_card_points:hover{
+  transform: scale(1.05);
+}
+
+.container_card_points.first_place_card{
+  background-color: #eac702;
+  color: #ffffff;
+  box-shadow: 1px 10px 55px 4px rgba(234,199,2,1);
+  z-index: 1;
+}
+
+.container_card_points.second_place_card{
+  background-color: #C0C0C0;
+  box-shadow: 1px 10px 55px 4px #eae9e9;
+  z-index: 2;
+}
+
+.container_card_points.third_place_card{
+  background-color: #CD7F32;
+  box-shadow: 1px 10px 55px 4px #CD7F32;
+  margin-bottom: 15px;
+}
+.container_card_points{
+  box-shadow: 16px 13px 28px -1px rgba(51,48,51,0.75);
+
+}
+
+
+.left_container{
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.card_number{
+  height: 44px;
+  width: 44px;
+  padding: 0 12px;
+  border-radius: 10px;  
+  text-align: center;
+  background: #ffffff22;
+  border-bottom: 2px rgba(0, 0, 0, 0.699) solid;
+  border-right: 1px rgba(0, 0, 0, 0.598) solid;
+  color: white;
+  text-align: center;
+  display: flex;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  font-style: normal;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.543);
+}
+
+
+
+.player_name_container{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+
+}
+.player_name_container.first_place_playername,.second_place_playername, .third_place_playername{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.player_name_container.first_place_playername{
+  color: rgb(248, 233, 146);
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+}
+.player_name_container.second_place_playername{
+  text-shadow: 0 0 3px #000000, 0 0 5px #08000c;
+  color: rgb(213, 211, 211);
+}
+.player_name_container.third_place_playername{
+  text-shadow: 0 0 3px #000000, 0 0 5px #08000c;
+  color: #e3a160;
+}
+
+
+.icon_container {
+  position: relative;
+
+}
+
+.first_place_icon{
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.points_container{
+  /* font-size: 25px; */
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.points_container.first_place_playername,.second_place_playername, .third_place_playername{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.points_container.first_place_playername{
+
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  color: rgb(248, 233, 146);
+}
+.points_container.second_place_playername{
+  
+  text-shadow: 0 0 3px #000000, 0 0 5px #08000c;
+  color: rgb(213, 211, 211);
+}
+.points_container.third_place_playername{
+  text-shadow: 0 0 3px #000000, 0 0 5px #08000c;
+  color: #e3a160;
+}
+
+
+@media (min-width: 637px) {
+  .player_name_container{
+    font-size: 40px;
+  }
+  .player_name_container.first_place_playername,.second_place_playername, .third_place_playername{
+  font-size: 60px;
+    
+  }
+  .first_place_icon{
+    width: 90px;
+  }
+  .points_container{
+    font-size: 40px;
+  }
+  .points_container.first_place_playername,.second_place_playername, .third_place_playername{
+    font-size: 60px;
+  }
+  .icon_container {
+    height: 100px;
+    width: 100px;
+  }
+  
+}
+
+@media (max-width: 689px) {
+  .player_name_container{
+    font-size: 30px;
+  }
+  .player_name_container.first_place_playername,.second_place_playername, .third_place_playername{
+    font-size: 40px;
+    }
+    .first_place_icon{
+      width: 70px;
+    }
+    .points_container{
+      font-size: 35px;
+    }
+    .points_container.first_place_playername,.second_place_playername, .third_place_playername{
+      font-size: 40px;
+    }
+    .icon_container {
+      height: 70px;
+      width: 70px;
+
+    }
+}
+
+@media (max-width: 449px) {
+  .player_name_container{
+    font-size: 30px;
+  }
+  .player_name_container.first_place_playername,.second_place_playername, .third_place_playername{
+    font-size: 40px;
+    }
+    .first_place_icon{
+      width: 70px;
+    }
+    .points_container{
+      font-size: 35px;
+    }
+    .points_container.first_place_playername,.second_place_playername, .third_place_playername{
+      font-size: 40px;
+    }
+    
+    .icon_container {
+      height: 70px;
+      width: 70px;
+
+    }
+}
